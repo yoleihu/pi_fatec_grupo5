@@ -1,0 +1,26 @@
+create DATABASE projetoPI
+
+use projetoPI
+
+create table jogador(
+	cod_jogador int PRIMARY KEY IDENTITY,
+	nome_jogador varchar(50) not null,
+	num_vidas int not null,
+	senha_jogador varchar(50) not null
+)
+
+create table ranking(
+	cod_ranking int PRIMARY KEY IDENTITY,
+	tempo time,
+	fk_cod_jogador int not null,
+	fk_cod_fase int not null,
+)
+
+create table fase(
+	cod_fase int PRIMARY KEY IDENTITY,
+	nome_fase varchar(10) not null
+)
+
+ALTER TABLE ranking ADD FOREIGN KEY (fk_cod_jogador) REFERENCES jogador(cod_jogador);
+ALTER TABLE ranking ADD FOREIGN KEY (fk_cod_fase) REFERENCES fase(cod_fase);
+

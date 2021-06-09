@@ -1,0 +1,18 @@
+use projetoPI
+
+INSERT INTO fase(nome_fase)
+VALUES ('Primavera');
+
+INSERT INTO fase(nome_fase)
+VALUES ('Verão');
+
+INSERT INTO fase(nome_fase)
+VALUES ('Outono');
+
+INSERT INTO fase(nome_fase)
+VALUES ('Inverno');
+
+INSERT INTO fase(nome_fase)
+VALUES ('Boss');
+
+select * from fase
